@@ -10,13 +10,15 @@ const {
 
 app.post("/product/donut", connectDb, async (req, res, next) => {
   const [ result ] = await req.conn.query(
-    getProduct('CP-502101')
+    getProduct(req.body.MessageAttributeProductId || 'CP-502101')
   )
   if (result.length > 0) {
     const product = result[0]
-    const incremental = req.body.stock || 0
+    console.log("req.body = ", req.body)
+    const incremental = req.body.MessageAttributeProductCnt || 0
 
-    await req.conn.query(increaseStock(product.product_id, incremental))
+    const queryResult = await req.conn.query(increaseStock(product.product_id, incremental))
+    console.log('입고성공! result = ', queryResult);
     return res.status(200).json({ message: `입고 완료! 남은 재고: ${product.stock + incremental}`});
   } else {
     return res.status(400).json({ message: "상품 없음" });
