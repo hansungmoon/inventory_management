@@ -1,3 +1,7 @@
+## 아키텍쳐
+![image](https://github.com/hansungmoon/inventory_management/assets/98951034/f761e1bd-d917-48f5-bb49-73711abf61eb)
+
+
 ## 목표
 - 메시지 큐의 Pub/Sub 패턴과 Producer/Consumer 패턴의 차이를 이해한다
 - DB와 서버와의 통신이 가능하도록 연결한다
