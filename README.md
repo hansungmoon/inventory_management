@@ -1,5 +1,5 @@
 ## 아키텍쳐
-![image](https://github.com/hansungmoon/inventory_management/assets/98951034/f761e1bd-d917-48f5-bb49-73711abf61eb)
+![image](https://github.com/hansungmoon/inventory_management/assets/98951034/e4d64419-0526-40fd-8685-17aec7d22fef)
 
 
 ## 목표
